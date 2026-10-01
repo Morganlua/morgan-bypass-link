@@ -30,7 +30,6 @@ def bypass_target():
         soup = BeautifulSoup(response.text, 'html.parser')
         final_link = None
 
-        # Logika ekstraksi Sub4Unlock / Safelink
         if "sub4unlock" in target_url or "subs4unlock" in target_url:
             btn_target = soup.find('a', id=re.compile('download|btn|unlock', re.I))
             if btn_target and btn_target.get('href'):
@@ -72,3 +71,4 @@ def bypass_target():
 
 def handler(environ, start_response):
     return app(environ, start_response)
+                        
