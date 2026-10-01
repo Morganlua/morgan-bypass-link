@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morgan Bypass - SFL & Sub4Unlock</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0b0b0e;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header-profile {
+            display: flex;
+            align-items: center;
+            align-self: flex-start;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #ff2a6d;
+        }
+        .brand-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #d1d5db;
+        }
+        .card-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 20px;
+            object-fit: cover;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(255, 42, 109, 0.2);
+            border: 2px solid #1f1f2e;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+        h1 span {
+            color: #ff2a6d;
+        }
+        .input-box {
+            width: 100%;
+            background: #15151c;
+            border: 1px solid #262636;
+            border-radius: 14px;
+            padding: 16px;
+            font-size: 14px;
+            color: #fff;
+            outline: none;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        .input-box:focus {
+            border-color: #ff2a6d;
+            box-shadow: 0 0 10px rgba(255, 42, 109, 0.3);
+        }
+        .btn-bypass {
+            width: 100%;
+            background: linear-gradient(135deg, #ff2a6d, #d90429);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 4px 15px rgba(255, 42, 109, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .btn-bypass:active {
+            transform: scale(0.98);
+        }
+        .result-container {
+            width: 100%;
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .status-badge {
+            background: #102a1b;
+            color: #2ecc71;
+            border: 1px solid #1e4620;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .result-box {
+            background: #15151c;
+            border: 1px solid #262636;
+            border-radius: 14px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #9ca3af;
+        }
+        .tag-type {
+            background: #2a1522;
+            color: #ff2a6d;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .link-output {
+            background: #0b0b0e;
+            border: 1px solid #20202d;
+            padding: 12px;
+            border-radius: 8px;
+            color: #ff758f;
+            font-size: 13px;
+            word-break: break-all;
+        }
+        .action-row {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-action {
+            flex: 1;
+            background: #1f1f2e;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: 0.2s;
+        }
+        .btn-action:hover {
+            background: #2d2d44;
+        }
+        .btn-action.open {
+            background: linear-gradient(135deg, #ff2a6d, #d90429);
+        }
+        .footer-text {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #6b7280;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-profile">
+            <img src="https://i.imgur.com/8Km9tLL.png" alt="Avatar" class="avatar">
+            <span class="brand-name">Morgan Network</span>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop&q=60" alt="Art" class="card-img">
+
+        <h1>Bypass<br><span>sfl & Sub4Unlock</span></h1>
+
+        <input type="text" id="targetUrl" class="input-box" placeholder="https://sub4unlock.com/xxxx atau link sfl...">
+
+        <button class="btn-bypass" onclick="executeBypass()">
+            <span>▷ Bypass</span>
+        </button>
+
+        <div class="result-container" id="resultContainer">
+            <div class="status-badge">
+                <span>✓ Bypass berhasil</span>
+            </div>
+            
+            <div class="result-box">
+                <div class="result-header">
+                    <span>✓ LINK HASIL</span>
+                    <span class="tag-type">SUB4UNLOCK → SFL</span>
+                </div>
+                <div class="link-output" id="finalLink">
+                    -
+                </div>
+                <div class="action-row">
+                    <button class="btn-action" onclick="copyLink()">
+                        <span>📋 Copy</span>
+                    </button>
+                    <button class="btn-action open" onclick="openLink()">
+                        <span>↗ Buka</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-text">
+            Powered by Morgan Exploit Framework &copy; 2026
+        </div>
+    </div>
+
+    <script>
+        async function executeBypass() {
+            const inputVal = document.getElementById('targetUrl').value.trim();
+            const resultBox = document.getElementById('resultContainer');
+            const finalLinkEl = document.getElementById('finalLink');
+
+            if (!inputVal) {
+                alert("Masukkan tautan keparat yang mau di-bypass dulu, Tuan!");
+                return;
+            }
+
+            finalLinkEl.innerText = "Sedang merusak sistem target...";
+            resultBox.style.display = 'flex';
+
+            try {
+                let response = await fetch('/api/bypass', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url: inputVal })
+                });
+
+                let data = await response.json();
+                
+                if (data.status === 'success') {
+                    finalLinkEl.innerText = data.url;
+                } else {
+                    alert("Gagal membobol: " + data.message);
+                    resultBox.style.display = 'none';
+                }
+            } catch (err) {
+                alert("Koneksi ke backend server gagal, Tuan Morgan!");
+                resultBox.style.display = 'none';
+            }
+        }
+
+        function copyLink() {
+            const linkText = document.getElementById('finalLink').innerText;
+            navigator.clipboard.writeText(linkText).then(() => {
+                alert("Tautan berhasil disalin, Tuan Morgan!");
+            });
+        }
+
+        function openLink() {
+            const linkText = document.getElementById('finalLink').innerText;
+            window.open(linkText, '_blank');
+        }
+    </script>
+</body>
+</html>
